@@ -1,0 +1,100 @@
+---
+title: "README"
+author: "Danilo Ac Herrera"
+date: "27/9/2021"
+output: html_document
+---
+# GetAndCleaningData
+Getting and Cleaning Data Course Project
+
+The run_script explanation is the following:
+
+Calling the "dplyr" library
+
+
+Item 0 
+upload data and informatation to R environment 
+"features" contains information from "UCI HAR Dataset/features.txt" file.
+"activities" contains information from "UCI HAR Dataset/activity_labels.txt"
+"subject_test" contains information from "UCI HAR Dataset/test/subject_test.txt"
+"x_test" contains information from "UCI HAR Dataset/test/X_test.txt"
+"y_test" contains information from "UCI HAR Dataset/test/y_test.txt"
+"subject_train" contains information from "UCI HAR Dataset/train/subject_train.txt"
+"x_train" contains information from "UCI HAR Dataset/train/X_train.txt"
+"y_train" contains information from "UCI HAR Dataset/train/y_train.txt"
+
+
+Item 1 
+1. Merges the training and the test sets to create one data set.
+
+Because of test and train have the same columns, we can add the rows and save in a new data set
+* "subject" contains the join rows from subject_test and subject_train
+* "x" contains the join rows from x_test and x_train
+* "y" contains the join rows from y_test and y_train
+
+After that checking row number to be able add the three data sets into new one 
+
+"mdata" contains the bind columns because have the same rows number
+
+
+Item 2
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+
+For this item I assume and  select for columns subject and those contains "mean" and "std" values in names
+and save them into "tdata". 
+
+Item 3 
+3. Uses descriptive activity names to name the activities in the data set
+
+Update code column with the activities' names in column 2 of activities
+
+
+Item 4
+4. Appropriately labels the data set with descriptive variable names.
+
+For this item I did the following activities 
+
+a) Check the colnames to identify items to update, this colnames instruction will be appear for each update I made
+
+b) update the "t" letter for "Time" and "f" for "Frequency"" at the begin of name
+
+c) Update for capital letter first letter on names of columns 1 and 2
+
+d) Update for "mean()"" for "Mean" and "std()" for "Std" to have a first letter capital standard
+
+e) Update to remove the parenthesis because it appears a lot, and was not remove with previous sentence
+
+f) Update "Mag" to "Magnitude"
+
+e) There are some tBody texts that changed to TimeBody
+
+g) Update "Freq" to "Frequency"
+
+h) Update BodyBody to Body, I assume that it should be one time word
+
+i) Update "Acc"" to "Accelerometer"
+
+j) Update Gyro to Gyroscope
+
+k) Update angle to Angle, just to have the first capital letter standard
+
+l) Update "gravityMean" to "GravityMean", just to have the first capital letter standard
+
+m) Update "gravity" to "Gravity", just to have the first capital letter standard
+
+
+Item 5 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Save the result data frame of grouping and summarize to independent data frame
+
+View independent result and check
+
+Write the result in an TXT file as it request
+
+End of file
+
+
+
+
+

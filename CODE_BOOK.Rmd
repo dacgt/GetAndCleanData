@@ -1,0 +1,37 @@
+---
+title: "CODE_BOOK"
+author: "Danilo Ac Herrera"
+date: "27/9/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Getting and Cleaning Data Course Project
+
+The run_script explanation variables:
+
+variables and explanation 
+"features" contains information from "UCI HAR Dataset/features.txt" file.
+"activities" contains information from "UCI HAR Dataset/activity_labels.txt"
+"subject_test" contains information from "UCI HAR Dataset/test/subject_test.txt"
+"x_test" contains information from "UCI HAR Dataset/test/X_test.txt"
+"y_test" contains information from "UCI HAR Dataset/test/y_test.txt"
+"subject_train" contains information from "UCI HAR Dataset/train/subject_train.txt"
+"x_train" contains information from "UCI HAR Dataset/train/X_train.txt"
+"y_train" contains information from "UCI HAR Dataset/train/y_train.txt"
+"subject" contains the join rows from subject_test and subject_train
+"x" contains the join rows from x_test and x_train
+"y" contains the join rows from y_test and y_train
+"mdata" contains the bind columns of the subject, x, y
+"tdata" contains the selected columns "subject" and those who contains "mean" and "std" values in names
+"independent" contains the result data frame of grouping and summarize "tdata"
+
+
+```{r independent}
+View(independent)
+```
